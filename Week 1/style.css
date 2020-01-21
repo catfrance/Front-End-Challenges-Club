@@ -1,123 +1,137 @@
 :root {
-    --color-primary: #4c2982;
-    --color-secondary: #f9d170;
-    --color-bg: #f9f7f3;
-    --color-text: #252525;
-    --color-light: #f3f3f3;
-    --color-success: #067973;
-    --color-success-bg: #f5fffe;
-    --color-error: #b71540;
-    --color-error-bg: #fdeff3;
-  }
+--color-primary: #4c2982;
+--color-secondary: #f9d170;
+--color-bg: #f9f7f3;
+--color-text: #252525;
+--color-light: #f3f3f3;
+--color-success: #067973;
+--color-success-bg: #f5fffe;
+--color-error: #b71540;
+--color-error-bg: #fdeff3;
+}
 
-  @font-face {
+@font-face {
+font-family: 'Inter';
+font-style:  normal;
+font-weight: 900;
+font-display: swap;
+src: url("Inter-Black.woff2?v=3.11") format("woff2"),
+        url("Inter-Black.woff?v=3.11") format("woff");
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--color-light);
+    font-family: Helvetica,sans-serif;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    padding-top: 20vh;
+    color: var(--color-text);
+}
+
+h1 {
     font-family: 'Inter';
-    font-style:  normal;
-    font-weight: 900;
-    font-display: swap;
-    src: url("Inter-Black.woff2?v=3.11") format("woff2"),
-         url("Inter-Black.woff?v=3.11") format("woff");
-  }
+    color: var(--color-primary);
+}
 
-  body {
-      box-sizing: border-box;
-      margin: 0;
-      min-height: 100vh;
-      background-color: var(--color-light);
-      font-family: Helvetica,sans-serif;
-      font-size: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--color-text);
-  }
+.form-container {
+    max-width: 300px;
+}
 
-  h1 {
-      font-family: 'Inter';
-      color: var(--color-primary);
-  }
+label {
+    font-family: 'Inter';
+    color: var(--color-primary);
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
 
-  .form-container {
-      max-width: 300px;
-  }
+.field {
+    -webkit-box-shadow: 0px 2px 8px 0px rgba(210,210,210,0.8);
+    -moz-box-shadow: 0px 2px 8px 0px rgba(210,210,210,0.8);
+    box-shadow: 0px 2px 8px 0px rgba(210,210,210,0.8);
+    display: inline-block;
+    margin: 5px 0;
+}
 
-  label {
-      font-family: 'Inter';
-      color: var(--color-primary);
-      text-transform: uppercase;
-      font-size: 0.9em;
-  }
+input[type="email"] {
+    -webkit-box-shadow: 0px 2px 8px 0px rgba(210,210,210,0.8);
+    -moz-box-shadow: 0px 2px 8px 0px rgba(210,210,210,0.8);
+    box-shadow: 0px 2px 8px 0px rgba(210,210,210,0.8);
+    box-sizing: border-box;
+    height: 40px;
+    width: calc(100% - 40px);
+    padding: 5px 10px;
+    color: var(--color-text);
+    float: left;
+    border: 1px solid transparent;
+}
 
-  .field {
-      -webkit-box-shadow: 0px 2px 8px 0px rgba(210,210,210,0.8);
-      -moz-box-shadow: 0px 2px 8px 0px rgba(210,210,210,0.8);
-      box-shadow: 0px 2px 8px 0px rgba(210,210,210,0.8);
-      display: inline-block;
-      margin: 5px 0;
-  }
+button {
+    -webkit-box-shadow: 0px 4px 8px 0px rgba(210,210,210,0.8);
+    -moz-box-shadow: 0px 4px 8px 0px rgba(210,210,210,0.8);
+    box-shadow: 0px 4px 8px 0px rgba(210,210,210,0.8);
+    border: none;
+    background-color: var(--color-secondary);
+    height: 40px;
+    vertical-align: bottom;
+    padding: 9px;
+    border: 1px solid transparent;
+}
 
-   input[type="email"] {
-      -webkit-box-shadow: 0px 2px 8px 0px rgba(210,210,210,0.8);
-      -moz-box-shadow: 0px 2px 8px 0px rgba(210,210,210,0.8);
-      box-shadow: 0px 2px 8px 0px rgba(210,210,210,0.8);
-      box-sizing: border-box;
-      border: none;
-      height: 40px;
-      padding: 5px 10px;
-      color: var(--color-text);
-      float: left;
-      border: 1px solid transparent;
-  }
+input[type="email"]:focus,
+button:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
 
-input[type="email"]:focus {
-      outline: none;
-      border-color: var(--color-primary);
-  }
+svg {
+    height: 20px;
+}
 
-  button {
-      -webkit-box-shadow: 0px 4px 8px 0px rgba(210,210,210,0.8);
-      -moz-box-shadow: 0px 4px 8px 0px rgba(210,210,210,0.8);
-      box-shadow: 0px 4px 8px 0px rgba(210,210,210,0.8);
-      border: none;
-      background-color: var(--color-secondary);
-      height: 40px;
-      vertical-align: bottom;
-      padding: 10px;
-  }
+button svg {
+vertical-align: middle;
+}
 
-  svg {
-      height: 20px;
-  }
+svg path {
+    fill: var(--color-primary);
+}
 
-  button svg {
-    vertical-align: middle;
-  }
+.message-container {
+    border: 1px solid transparent;
+    padding: 10px;
+    margin-top: 10px;
+    display: none;
+}
 
-  svg path {
-      fill: var(--color-primary);
-  }
+.error {
+    border-color: var(--color-error);
+    background-color: var(--color-error-bg);
+    color: var(--color-error);
+}
 
-  .error {
-      border: 1px solid #d88097;
-      background-color: #fdebf0;
-      padding: 10px;
-      color: var(--color-error);
-      margin-top: 10px;
-      display: none;
-  }
+.success {
+    border-color: var(--color-success);
+    background-color: var(--color-success-bg);
+    color: var(--color-success);    
+}
 
-  .error svg {
-      vertical-align: top;
-  }
-  .error svg path {
-      fill: var(--color-error);
-  }
+.message-container svg {
+    vertical-align: top;
+    float: left;
+}
+.error svg path {
+    fill: var(--color-error);
+}
+.success svg path {
+    fill: var(--color-success);
+}
+.message-container .message {
+    margin-left: 30px;
+}
 
-  .error .message {
-      margin-left: 10px;
-      display: inline-block;
-  }
-
-  input[type="email"]:invalid ~ .error {
-      display: block;
-  }
+.message-container.active {
+    display: block;
+}
